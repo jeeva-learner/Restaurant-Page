@@ -18,26 +18,28 @@ import './style.css'
             content.removeChild(content.lastElementChild);
         }
     };
-
-    const setbgclass = (clss=null)=>{
-        if(clss == null){
-            content.remove('home-bg', 'menu-bg')
+    const setbgclass = (clss = null) => {
+        content.classList.remove('home-bg', 'menu-bg');
+        if (clss) {
+            content.classList.add(clss);
         }
-        content.className = clss;
-    }
+    };
 
     buttons.home.onclick = () => {
         clearContent();
+        setbgclass('home-bg');
         home();
     };
 
     buttons.menu.onclick = () => {
         clearContent();
+        setbgclass('menu-bg');
         menu();
     };
 
     buttons.about.onclick = () => {
         clearContent();
+        content.classList.remove('home-bg', 'menu-bg')
         aboutus();
     };
 

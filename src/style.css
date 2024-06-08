@@ -2,7 +2,7 @@
     --font-family: 'Arial', sans-serif;
     --primary-color: #333;
     --secondary-color: #555;
-    --background-color: #f5f5f5;
+    --background-color: rgba(0,0,0,0.1);
     --text-color: white;
     --padding: 10px 20px;
     --content-max-width: 800px;
@@ -59,13 +59,23 @@ button:hover {
     border-radius: var(--border-radius);
 }
 .home-bg{
-    background: url(./assets/Home_page.jpg) no-repeat center center;
+    background-image: url('./assets/Home_page.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 .menu-bg{
-    background: url(./assets/Menu.jpg) no-repeat center center;
+    background-image: url('./assets/Menu.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .Text-area, .items, .text-area {
-    background: var(--background-opacity);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-radius: var(--border-radius);
     width: 100%;
